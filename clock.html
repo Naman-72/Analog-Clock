@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="clock.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .background_color{
+          animation: changebg 8s infinite linear;
+          font-size: medium;
+         }
+         .changeC::after{
+           font-family: Georgia, 'Times New Roman', Times, serif;;
+           content: "";
+           animation: changeText 8s infinite linear;
+           color: blue;
+        }
+        @keyframes changebg {
+          0%{background-color: rgb(230, 255, 4);}
+          20%{background-color: rgb(20, 248, 248);}
+          40%{background-color: rgb(255, 196, 68);}
+          60%{background-color: rgb(187, 85, 255) ;}
+          80%{background-color: rgb(0, 253, 156);}           
+          100%{background-color:  rgb(253, 238, 248);}           
+      }
+      @keyframes changeText
+      {
+          0% {content: "WELCOME TO THIS SITE";}
+          25%{content: "THIS SITE IS DEVELOPED BY NAMAN";}
+          50%{content: "HOPE U LIKE THE SITE";}
+          75%{content: "I AM CURRENTLY A STUDENT IN CSE IN IITG";}
+          100%{content: "THANK YOU FOR VISITING MY SITE";}
+      }
+       </style>
+</head>
+<body>
+    <div class="container mt-5 pt-2" style="margin-top: auto;">
+        <hr style="border: 4px solid black;">
+        <h1 class="text-center text-primary" style="font-family: Georgia, 'Times New Roman', Times, serif;">TIME</h1>
+        <hr style="border: 4px solid black;">
+        <h3 class="text-center text-warning"><span id="time"></span> </h3>
+        <div id="clockContainer" style="size: 80%;">
+            <div id="hr">
+
+            </div>
+            <div id="min">
+
+            </div>
+            <div id="sec">
+
+            </div>
+        </div>
+    </div>
+    <div class="container border my-5 background_color text-center">
+        <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;">ABOUT CREATOR OF SITE</h2>
+        <div class="changeC"></div>
+      </div>
+    <script src="/clock.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
